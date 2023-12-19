@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Criste Eduard">
+    <meta name="keywords" content="restaurant, cuisine, cluj-napoca, restaurant cluj, livrare cluj">
+	<meta name="description" content="Bine ai venit pe site-ul Bisou Cuisine - locul unde pasiunea pentru gastronomie întâlnește confortul la tine acasă!
+	 Suntem un restaurant dedicat artei culinare, oferindu-ți o experiență gourmet inegalabilă chiar la ușa ta.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Bisou Cuisine</title>
+    <style>
+        .navi {
+            background-color: rgb(155, 151, 140);
+        }
+        .navbar img {
+            width: 125px;
+            margin-left: 30px;
+            background-color: rgb(128, 125, 116);
+            border-radius: 5px;
+            margin-right: 40px;
+        }
+        .navbar .nav-link {
+            color: black;
+            font-family: Work Sans;
+            font-size: 1.1em;
+            font-weight: 400;
+            margin-right: 15px;
+            background-color: rgb(128, 125, 116);
+            border-radius: 5px;
+            margin-top: 5px;
+            padding-left: 15px;
+        }
+        .navbar .nav-link:hover {
+            text-decoration: underline;
+            background-color: rgb(118, 115, 105);
+        }
+        .carousel-item .ratio img {
+            object-fit:cover;
+        }
+        .xx {
+          height: 580px;
+        }
+        h1 {
+          font-size: 3.8em;
+          font-family: Work Sans;
+          font-weight: 300;
+          letter-spacing: -0.05em;
+          opacity: 1;
+        }
+        .carousel-caption p {
+          font-family: Work Sans;
+          font-size: 1.5em;
+          letter-spacing: -0.02em;
+          font-weight: 300;
+        }
+        .carousel-caption {
+          background-color: rgb(132, 128, 117);
+          opacity: 0.93;
+          padding: 3px;
+        }
+        .carousel-caption a {
+          color: white;
+          font-family:Work Sans;
+          font-size: 1em;
+          letter-spacing: -0.02em;
+          font-weight: 300;
+          text-decoration: underline;
+        }
+        .carousel-caption a:hover{
+          color: rgb(203, 203, 203);
+        }
+        h2 {
+          font-family: Work Sans;
+          font-size: 3em;
+          justify-content: center;
+          text-align: center;
+          opacity: 0.9;
+          font-weight: 400;
+        }
+        .ffk {
+          background-color:rgb(142, 137, 126);
+          padding-top: 10px;
+          border-top: 3px solid rgb(255, 255, 255);
+        }
+        .bgac {
+          background-color:rgb(153, 148, 135);
+          padding: 20px;
+        }
+        .h3mod {
+          color: rgb(255, 255, 255);
+          font-size: 0.8em;
+          font-family: Work Sans;
+          font-weight: 300;
+        }
+        .accordion-button{
+          display: block;
+          justify-content: center;
+          text-align: center;
+          background-color: rgb(92, 90, 82);
+        }
+        .accordion-button:not(.collapsed) {
+          background-color: rgb(108, 105, 98);
+          color: white;
+        }
+        .accordion-button:focus {
+          outline: 0 !important;
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+        }
+        .accordion-button:hover{
+          background-color: rgb(98, 95, 87);
+        }
+        .oo {
+          border: 2px solid rgb(70, 67, 62);
+        }
+        .card {
+          padding: 15px 5px 5px 5px;
+          background-color: rgb(128, 125, 116);
+          margin: 3px;
+          border-radius: 6px;
+          opacity: 0.95;
+        }
+        .card:hover {
+          background-color: rgb(119, 115, 105);
+          opacity: 1;
+        }
+        .card-group p:hover {
+          background-color: rgb(97, 93, 85);
+        }
+        .card-group img {
+          width: 100%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 200px;
+        }
+        .rotund {
+          border-radius: 150px;
+        }
+        .card-group p{
+          opacity: 1;
+          color: white;
+          font-family: Work Sans;
+          text-align: center;
+          letter-spacing: -0.04em;
+          font-weight: 300;
+          font-size: 1.1em;
+          background-color: rgb(109, 105, 96);
+        }
+        .accordion-collapse {
+          background-color: rgb(211, 209, 201);
+        }
+        .card-header {
+          font-family: Work Sans;
+          font-weight: 600;
+          font-size: 2em;
+          background-color: rgb(73, 79, 99);
+          color: white;
+          opacity: 0.95;
+          letter-spacing: 0.02em;
+          margin-left: 15px;
+          margin-right: 15px;
+          box-shadow: 2px 2px 2px rgb(62, 62, 62);
+        }
+        .card-header:hover {
+          background-color: rgb(73, 79, 99);
+        }
+        .badge {
+         font-size: 0.6em;
+         font-family: Work Sans;
+         background-color: rgb(62, 68, 91);
+        }
+        .badge:hover {
+          background-color: rgb(71, 77, 104);
+        }
+        .card2 {
+          background-color: rgb(85, 91, 114);
+          box-shadow: 5px 5px 5px rgb(85, 85, 85);
+        }
+        .card2:hover {
+          background-color: rgb(88, 93, 112);
+        }
+        .card2 li{
+          font-family: Work Sans;
+          color: white;
+          font-size: 1.4em;
+          font-weight: 300;
+          margin-top: 10px;
+          background-color: rgb(73, 79, 99);
+          padding: 0px 8px 0px 8px;
+          border-radius: 5px;
+          box-shadow: 2px 2px 2px rgb(62, 62, 62);
+        }
+        .card2 img{
+          height: 190px;
+          object-fit: cover;
+          padding: 0px 10px 0px 10px;
+          border-radius: 25px;
+        }
+        .card2 p{
+          font-family: Work Sans;
+          color: white;
+          font-size: 1.4em;
+          font-weight: 300;
+          margin-top: 10px;
+          background-color: rgb(73, 79, 99);
+          padding: 0px 8px 0px 8px;
+          border-radius: 5px;
+          box-shadow: 2px 2px 2px rgb(62, 62, 62);
+        }
+        .card2 a{
+          font-family: Work Sans;
+          color: white;
+          font-weight: 300;
+        }
+        .card2 a:hover{
+          color: rgb(216, 216, 216);
+        }
+        .cnt {
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+        .imgdif img{
+          width: 4.5%;
+          height:4.5%;
+        }
+        .desprenoi img{
+          width:45%;
+          margin-right: 10px;
+          border-radius: 10px;
+          box-shadow: 5px 5px 5px rgb(53, 53, 53);
+          border: 3px solid rgb(123, 118, 108);
+          opacity: 0.9;
+        }
+        .desprenoi p{
+          font-family: Work Sans;
+          font-weight: 400;
+          font-size: 1.35em;
+          color: rgb(0, 0, 0);
+          opacity: 0.95;
+          letter-spacing: -0.01em;
+          margin-left: 5px;
+          margin-right: 15px;
+          word-spacing: -0.06em;
+
+        }
+        .footerul {
+          background-color: rgb(71, 68, 61);
+          padding-top: 10px;
+        }
+        .logofooter img{
+          width: 150px;
+          background-color: rgb(114, 110, 99);
+          border-radius: 5px;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          padding: 5px 10px 5px 10px;
+        }
+        .footerul li{
+          display: block;
+          align-items: center;
+          justify-content:center;
+        }
+        .icons a{
+          justify-content: center;
+          justify-items: center;
+          align-items: center;
+          text-align: center;
+          display: flex;
+          margin-top: 10px;
+          width: 8.5%;
+        }
+    .contact {
+        display:inline-block;
+        width: 100%;
+        background-color:rgb(113, 112, 105);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+    }
+    .contact a p {
+        color: rgb(0, 0, 0);
+        font-weight: 300;
+        font-family: Work Sans;
+        font-size: 1.3em;
+        opacity: 0.9;
+        letter-spacing: -0.01em;
+        align-items: center;
+        margin: 2px;
+        text-align: center;
+    }
+    .contact a {
+        text-decoration: none;
+        color: black;
+    }
+    .contact a:hover {
+        color: rgb(55, 55, 55);
+        text-decoration: underline;
+    }
+    .contact a p img {
+        height: 18px;
+        padding-right: 7px;
+    }
+    .extrapadding {
+        padding-top: 5px;
+    }
+    .mainlogo2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 75px;
+        background-color:rgb(102, 100, 93);
+        border-radius: 5px 5px 5px 5px;
+        padding: 1px 8px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .contact p{
+      align-items: center;
+      text-align: center;
+      font-family: Work Sans;
+      font-weight: 300;
+      padding-top: 5px;
+    }
+    .bigrow {
+      display: flex;
+      background: rgb(211, 206, 198);
+      width: 100%;
+      }
+    .bigrow iframe {
+      width: 100%;
+      height: 200px;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar sticky-top navi navbar-expand-md">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#carouselfade">
+            <img src="logo.png">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav flex-column flex-md-row">
+              <li class="nav-item"><a class="nav-link" href="#meniu">Meniu</a></li>
+              <li class="nav-item"><a class="nav-link" href="#livrare">Livrare</a></li>
+              <li class="nav-item"><a class="nav-link" href="#despre">Despre noi</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+            
+        </div>
+      </nav>
+      
+      <div id="carouselfade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#slider" data-bs-slide-to="3" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#slider" data-bs-slide-to="4" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          
+          <div class="carousel-item active">
+            <div class="ratio ratio-21x9 xx">
+                <img src="carousel/tigai.jpg" class="d-block w-100" alt="o masă și o farfurie cu paste în colțul din dreapta sus">
+            </div>
+            <div class="carousel-caption shadow rounded">
+              <h1>Bisou's Cuisine</h1>
+              <p>Bucură-te de preparate gourmet livrate până la ușa ta!</p>
+            </div>
+          </div>
+          
+          <div class="carousel-item shadow rounded">
+            <div class="ratio ratio-21x9 xx">
+              <img src="carousel/pahare.jpg" class="d-block w-100" alt="pahare pe o masă">
+            </div>
+            <div class="carousel-caption shadow rounded">
+              <p>Alege din varietatea de main courses și deserturi din <a href="#meniu">meniul</a> nostru acum!</p>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <div class="ratio ratio-21x9 xx">
+              <img src="carousel/bucatarie.jpg" class="d-block w-100" alt="un bucătar care gătește într-o bucatărie">
+            </div>
+            <div class="carousel-caption shadow rounded">
+              <p>Află mai multe despre <a href="#despre">povestea</a> din spatele restaurantului nostru.</p>
+            </div>  
+          </div>
+
+          <div class="carousel-item">
+            <div class="ratio ratio-21x9 xx">
+              <img src="carousel/prieteni.jpg" class="d-block w-100" alt="niște tineri care ciocnesc halbe de bere">
+            </div>
+            <div class="carousel-caption shadow rounded">
+              <p>Dă-ne tag într-un story cu mâncarea comandată de tine iar la următoarea ta comanda vei beneficia de o reducere de 25%</p>
+            </div>  
+          </div>
+          
+          <div class="carousel-item">
+            <div class="ratio ratio-21x9 xx">
+              <img src="carousel/opem.jpg" class="d-block w-100" alt="poză cu un semn de open">
+            </div>
+            <div class="carousel-caption shadow rounded">
+              <p>Comandă oricând între orele 10:00 și 23:00.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselfade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselfade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  
+      <div class="container-fluid max-width">
+        <div class="row ffk">
+            <h2 id="meniu">Meniu</h2>
+        </div>
+      </div>
+      
+      <div class="container-fluid max-width">
+        <div class="row bgac">
+          <div class="accordion" id="accordionExample">
+            
+            <div class="accordion-item oo">
+              <h3 class="accordion-header" id="headingOne">
+                <button class="accordion-button h3mod" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Main Courses
+                </button>
+              </h3>
+              
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                      <div class="card-group">
+                        <div class="card">
+                          <img src="meniu/meniu1.png" class="" alt="o poza cu o bucată de carne gustoasă înconjurată de legume">
+                          <div class="card-body">
+                            <p>Steak pe pat de legume sotate - 120 lei</p>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="meniu/meniu2.png" class="" alt="un bol cu mâncare japoneză">
+                          <div class="card-body">
+                            <p>Bol japonez - 75 lei</p>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="meniu/meniu3.png" class="" alt="o farfurie de paste cu niște roșii și frunze de busuioc">
+                          <div class="card-body">
+                            <p>Paste integrale cu ulei de măsline, roșii uscate și busuioc - 65 lei</p>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="meniu/meniu4.png" class="" alt="o poză cu un burger apetisant">
+                          <div class="card-body">
+                            <p>Burgerul casei - 70 lei</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-group">
+                        <div class="card">
+                          <img src="meniu/meniu5.png" class="" alt="Beef Wellington cu piure de hrean si sos de merișoare">
+                          <div class="card-body">
+                            <p>Beef Wellington cu piure de hrean si sos de merișoare - 150 lei</p>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="meniu/meniu6.png" class="" alt="un pește prăjit cu cartofi rumeniți la cuptor, oare se va uita cineva vreodată la asta?">
+                          <div class="card-body">
+                            <p>Știucă cu cartofi la cuptor - 110 lei</p>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="meniu/meniu7.png" class="" alt="o poză cu o ciorbiță neidentificată">
+                          <div class="card-body">
+                            <p>Ciorba casei - 45 lei</p>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <img src="meniu/meniu8.png" class="" alt="creveți cu roșii cherry">
+                          <div class="card-body">
+                            <p>Creveți cu roșii cherry - 80 lei</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item oo">
+              <h3 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed h3mod" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Deserts
+                </button>
+              </h3>
+              
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="card-group">
+                    <div class="card">
+                      <img src="meniu/desert1.png" class="" alt="o felie de tort albă">
+                      <div class="card-body">
+                        <p>Felie de tort cu vanilie și cireșe - 35 lei</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="meniu/desert2.png" class="" alt="niște cheesecake cu fructe de pădure">
+                      <div class="card-body">
+                        <p>Cheesecake servit cu fructe de pădure - 40 lei</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="meniu/desert3.png" class="" alt="un desert cu ciocolată și biscuiței">
+                      <div class="card-body">
+                        <p>Sorbet de ciocolată și cookies - 38 lei</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="meniu/desert4.png" class="" alt="o felie de tort cu ciocolată">
+                      <div class="card-body">
+                        <p>Felie de tort cu 3 tipuri de ciocolată belgiană - 43 lei</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="container-fluid max-width">
+        <div class="row ffk">
+            <h2 id="livrare">Livrare</h2>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row bgac">
+          <div class="col-6 col-lg-6 col-md-6 col-sm-12">
+            
+            <div class="card card2">
+              <div class="card-header">
+                Ofertele zilei! <span class="badge rounded-pill">Nou</span>
+              </div>
+              <div class="card-body">
+                <ul>
+                  <li>La fiecare 3 main-courses comandate vei primi și un desert din partea casei!</li>
+	                <li>În cazul în care comanda ta depășește suma de 200 de lei, vei beneficia de <strong>livrare gratuită!</strong></li>
+	                <li>În fiecare zi de vineri, deserturile sunt reduse cu <strong>25%!</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-6 col-md-6 col-sm-12">
+            <div class="card card2">
+              <img src="aaa.jpg" class="card-img-top" alt="o poză cu trei pahare cu băuturi colorate">
+              <div class="card-body">
+                  <p>Ridică-ți chiar tu comanda de la <a href="#harta">locația noastră</a> și evită costurile suplimentare de transport.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid ">
+        <div class="row bgac">
+          <div class="col-8 col-lg-8 col-md-12 col-sm-12 cnt">
+            <div class="card card2 imgdif">
+              <div class="card-body">
+                <p><img src="icons/time.png" alt="un ceas mic">Comandă oricând între orele 10:00 și 23:00.</p>
+                <p><img src="icons/phone.png" alt="un telefon mic">Pentru a comanda, contactează-ne la numărul nostru de telefon: <a href="">0896595935.</a></p>
+                <p><img src="icons/delivery.png" alt="o ilustrație cu o mașină pentru delivery">Tarif standard pentru livrare: 20 de lei.</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid max-width">
+        <div class="row ffk">
+            <h2 id="despre">Despre noi</h2>
+        </div>
+      </div>
+
+      <div class="container-fluid desprenoi">
+        <div class="row bgac desprenoi">
+          <div class="clearfix">
+            <img src="restaurant.jpg" class="col-md-6 float-md-end mb-3 ms-md-3" alt="o poză cu un restaurant fancy">
+          
+            <p>
+              La Bisou's Cuisine, ne dedicăm pasiunii pentru arta culinară, aducând în farfurie cele mai proaspete ingrediente,
+            selecționate cu grijă de către echipa noastră. Fiecare preparat este pregătit cu atenție la detalii, având la bază tehnici tradiționale și inovații contemporane, 
+            rezultând în combinații unice de arome și texturi.
+            </p>
+          
+            <p>
+              Credem în autenticitate și respect față de ingredientele de calitate și colaborăm strâns cu producători locali și internaționali de încredere 
+              pentru a ne asigura că fiecare ingredient folosit în bucătăria noastră este proaspăt și sustenabil obținut.
+            <p>
+              Ne-am propus încă din prima zi să redefinim gustul și să vă oferim o experiență culinară care 
+              să stârnească imaginația și să satisfacă cele mai exigente papile gustative.
+          </div>
+        </div>
+      </div>
+      <div class="contact" id="contact">
+        <a href="#carouselfade"><img class="mainlogo2" src="logo.png" alt="logo-ul restaurantului Bisou's Cuisine"></a>
+        <a href="#harta"><p><img src="marker.png" alt="o iconita pentru o locatie pe harta">Cluj-Napoca, Aleea Cioplea 7</p></a>
+        <a href="https://mail.google.com" target="_blank"><p><img src="envelope.png" alt="o iconita cu o scrisoare">bisouscuisine@adresafake.com</p></a>
+        <a href="https://www.instagram.com/" target="_blank"><p><img src="instagram.png" alt="logo instagram">@bisouscuisine</p></a>
+        <a href="https://www.facebook.com/" target="_blank"><p><img src="facebook.png" alt="logo instagram">Bisou's Cuisine</p></a>
+        <p>© 2023 Bisou's Cuisine, Inc.</p>
+      </div>
+      <div class="bigrow" id="harta">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.7092407340765!2d23.5607971759144!3d46.7509149466747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e7103a6bb49%3A0x11afd541223781c0!2sBloc%20S8%2C%20Aleea%20Cioplea%207%2C%20Cluj-Napoca%20400535!5e0!3m2!1sen!2sro!4v1701279246829!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+</body>
+</html>
